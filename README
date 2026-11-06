@@ -1,0 +1,8 @@
+to train a network:
+
+python3 ./pydisk3.py -nfile 2 -Nsamp 10000 -Nx 4 -Ny 4 -Nlearn 12000 -Nb 256  -explsigma 25 -widthfakt 4 -whichnet 2 -dev cuda:0 -learningrate 0.001 -actfact 0.4 -actfact2 0.0 -Ngradcoll 2 -average 500 -Nlayer 2
+
+
+to generate configs:
+
+python3 ./generate.py -load ../atnetstate.2200.2 -Nconf 1 -Nb 1024 -nfile 1 -explsigma 25 -dev cuda:0 -whichupd 10 -smcsteps 500
